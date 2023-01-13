@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>net.hlinfo</groupId>
   <artifactId>hlinfo-utils-redis-spring-boot-starter</artifactId>
-  <version>1.0.1</version>
+  <version>1.0.2</version>
   <name>hlinfo-utils-redis-spring-boot-starter</name>
   <url>https://github.com/hlinfocc/hlinfo-utils-redis-spring-boot-starter</url>
   <description>hlinfo-utils-redis-spring-boot-starter</description>
@@ -43,7 +43,7 @@
 	  <jackson.version>2.14.0</jackson.version>
 	  <spring.boot.starter.data.redis.version>2.5.12</spring.boot.starter.data.redis.version>
 	  <configuration.processor.version>2.6.1</configuration.processor.version>
-	  <hlinfo.utils.version>1.0.9</hlinfo.utils.version>
+	  <hlinfo.utils.version>1.0.10</hlinfo.utils.version>
   </properties>
   
   <dependencies>
