@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>net.hlinfo</groupId>
   <artifactId>hlinfo-utils-redis-spring-boot-starter</artifactId>
-  <version>1.0.6</version>
+  <version>1.0.7</version>
   <name>hlinfo-utils-redis-spring-boot-starter</name>
   <url>https://github.com/hlinfocc/hlinfo-utils-redis-spring-boot-starter</url>
   <description>hlinfo-utils-redis-spring-boot-starter</description>
@@ -40,10 +40,10 @@
 	  <maven.compiler.source>1.8</maven.compiler.source>
 	  <maven.compiler.target>1.8</maven.compiler.target>
 	  <bouncycastle.version>1.70</bouncycastle.version>
-	  <jackson.version>2.14.0</jackson.version>
-	  <spring.boot.starter.data.redis.version>2.5.12</spring.boot.starter.data.redis.version>
-	  <configuration.processor.version>2.6.1</configuration.processor.version>
-	  <hlinfo.utils.version>1.0.15</hlinfo.utils.version>
+	  <jackson.version>2.19.0</jackson.version>
+	  <spring.boot.starter.data.redis.version>2.7.18</spring.boot.starter.data.redis.version>
+	  <configuration.processor.version>2.7.18</configuration.processor.version>
+	  <hlinfo.utils.version>1.0.17</hlinfo.utils.version>
   </properties>
   
   <dependencies>
@@ -148,16 +148,15 @@
       </plugin>
       <!--staging puglin,用于自动执行发布阶段(免手动)-->
       <plugin>
-          <groupId>org.sonatype.plugins</groupId>
-          <artifactId>nexus-staging-maven-plugin</artifactId>
-          <version>1.6.8</version>
+          <groupId>org.sonatype.central</groupId>
+          <artifactId>central-publishing-maven-plugin</artifactId>
+          <version>0.7.0</version>
           <extensions>true</extensions>
           <configuration>
-              <serverId>ossrh</serverId>
-              <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
-              <autoReleaseAfterClose>true</autoReleaseAfterClose>
+             <publishingServerId>central</publishingServerId>
+             <autoPublish>true</autoPublish>
           </configuration>
-      </plugin>
+        </plugin>
       <!-- release plugin,用于发布到release仓库部署插件 -->
       <plugin>
           <groupId>org.apache.maven.plugins</groupId>
