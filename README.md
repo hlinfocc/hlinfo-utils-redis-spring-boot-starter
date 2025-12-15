@@ -14,7 +14,7 @@ hlinfo-utils-redis-spring-boot-starter 是提供在 Spring Boot 项目中使用 
 <dependency>
   <groupId>net.hlinfo</groupId>
   <artifactId>hlinfo-utils-redis-spring-boot-starter</artifactId>
-  <version>1.0.7</version>
+  <version>2.0.1</version>
 </dependency>
 ```
 

@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>net.hlinfo</groupId>
   <artifactId>hlinfo-utils-redis-spring-boot-starter</artifactId>
-  <version>1.0.7</version>
+  <version>2.0.1</version>
   <name>hlinfo-utils-redis-spring-boot-starter</name>
   <url>https://github.com/hlinfocc/hlinfo-utils-redis-spring-boot-starter</url>
   <description>hlinfo-utils-redis-spring-boot-starter</description>
@@ -35,15 +35,15 @@
     </developers>
   
   <properties>
-	  <java.version>1.8</java.version>
+	  <java.version>17</java.version>
 	  <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	  <maven.compiler.source>1.8</maven.compiler.source>
-	  <maven.compiler.target>1.8</maven.compiler.target>
-	  <bouncycastle.version>1.70</bouncycastle.version>
+	  <maven.compiler.source>${java.version}</maven.compiler.source>
+	  <maven.compiler.target>${java.version}</maven.compiler.target>
+	  <bouncycastle.version>1.80</bouncycastle.version>
 	  <jackson.version>2.19.0</jackson.version>
-	  <spring.boot.starter.data.redis.version>2.7.18</spring.boot.starter.data.redis.version>
-	  <configuration.processor.version>2.7.18</configuration.processor.version>
-	  <hlinfo.utils.version>1.0.17</hlinfo.utils.version>
+	  <spring.boot.starter.data.redis.version>3.5.3</spring.boot.starter.data.redis.version>
+	  <configuration.processor.version>3.5.3</configuration.processor.version>
+	  <hlinfo.utils.version>2.0.6</hlinfo.utils.version>
   </properties>
   
   <dependencies>
@@ -86,15 +86,17 @@
 		<plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-plugin-plugin</artifactId>
-          <version>3.6.1</version>
+          <version>3.15.2</version>
        </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.14.1</version>
       </plugin>
       <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-source-plugin</artifactId>
+          <version>3.4.0</version>
           <executions>
               <execution>
                   <id>attach-sources</id>
@@ -111,7 +113,7 @@
       <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-javadoc-plugin</artifactId>
-          <version>3.1.0</version>
+          <version>3.12.0</version>
           <configuration>
           		<additionalJOption>-Xdoclint:none</additionalJOption>
           </configuration>
@@ -127,6 +129,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.5.4</version>
         <configuration>
             <skipTests>true</skipTests>
         </configuration>
@@ -135,7 +138,7 @@
       <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-gpg-plugin</artifactId>
-          <version>1.6</version>
+          <version>3.2.8</version>
           <executions>
               <execution>
                   <id>sign-artifacts</id>
@@ -150,7 +153,7 @@
       <plugin>
           <groupId>org.sonatype.central</groupId>
           <artifactId>central-publishing-maven-plugin</artifactId>
-          <version>0.7.0</version>
+          <version>0.9.0</version>
           <extensions>true</extensions>
           <configuration>
              <publishingServerId>central</publishingServerId>
@@ -161,7 +164,7 @@
       <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-release-plugin</artifactId>
-          <version>3.0.0-M4</version>
+          <version>3.2.0</version>
       </plugin>
    </plugins>
   </build>
@@ -169,11 +172,11 @@
  	<!-- 这里引入 Settings.xml 中设置的用户名、密码 -->
     <distributionManagement>
         <snapshotRepository>
-            <id>ossrh</id>
+            <id>central</id>
             <url>https://oss.sonatype.org/content/repositories/snapshots</url>
         </snapshotRepository>
         <repository>
-            <id>ossrh</id>
+            <id>central</id>
             <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
         </repository>
     </distributionManagement>
